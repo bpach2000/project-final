@@ -2,7 +2,7 @@
 title: "Proposal title"
 subtitle: "Proposal"
 author: 
-  - name: "Team Name"
+  - name: "Brooke Pacheoc and Stacey Odell"
     affiliations:
       - name: "School of Information, University of Arizona"
 description: "Project description"
@@ -24,16 +24,16 @@ execute:
 library(tidyverse)
 ```
 
-## Dataset
+## Data Set
 
 ```{r}
 #| label: load-dataset
 #| message: false
 ```
 
-A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
+The Federal Bureau of Investigation (FBI) oversees the Uniform Crime Reporting (UCR) program, a nationwide initiative designed to gather and share crime data from across the United States. Participation in the UCR program is mandated for local, state, tribal, and federal law enforcement agencies, each of which is responsible for submitting a standardized set of crime data to the FBI on an annual basis. For the purposes of this proposal, two datasets were extracted from the FBI’s Crime Data Explorer platform. 
 
-Make sure to load the data and use inline code for some of this information.
+The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023. The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023. I will provide more details about the variables in each data set and explain the comparisons made in the following sections of this proposal.
 
 ## Questions
 
