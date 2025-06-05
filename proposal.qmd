@@ -22,60 +22,56 @@ execute:
 #| label: load-pkgs
 #| message: false
 library(tidyverse)
+library(here)
 ```
 
 # Data Set
 
-```{r}
+The Federal Bureau of Investigation (FBI) oversees the Uniform Crime Reporting (UCR) program, a nationwide initiative designed to gather and share crime data from across the United States. Participation in the UCR program is mandated for local, state, tribal, and federal law enforcement agencies, each of which is responsible for submitting a standardized set of crime data to the FBI on an annual basis. For the purposes of this proposal, two data sets were extracted from the FBI’s Crime Data Explorer platform.
 
-# Getting all the underlying data in the dataset
-forest        <- deforestation_data$forest
-forest_area   <- deforestation_data$forest_area
-brazil_loss   <- deforestation_data$brazil_loss
-soybean_use   <- deforestation_data$soybean_use
-vegetable_oil <- deforestation_data$vegetable_oil
-
-```
-
-The Federal Bureau of Investigation (FBI) oversees the Uniform Crime Reporting (UCR) program, a nationwide initiative designed to gather and share crime data from across the United States. Participation in the UCR program is mandated for local, state, tribal, and federal law enforcement agencies, each of which is responsible for submitting a standardized set of crime data to the FBI on an annual basis. For the purposes of this proposal, two datasets were extracted from the FBI’s Crime Data Explorer platform. 
-
-# Data Set 1
+## Data Set 1
 
 ```{r}
-#| label: load-dataset
-#| message: false
+# Read in data from Arizona offenses in 2023 file
+arizona_crimes <- read_csv(here(
+  "data" ,"Arizona_Offense_Type_by_Agency_2023.csv"), show_col_types = FALSE) |>
+  glimpse()
 ```
 
-The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023. The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023. I will provide more details about the variables in each data set and explain the comparisons made in the following sections of this proposal.
+The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023.
 
-# Data Set 2
+## Data Set 2
 
 ```{r}
-#| label: load-dataset
-#| message: false
+# Read data from property crimes by state in 2023 file
+property <- read_csv(here(
+  "data" ,"Crimes_Against_Property_Offenses_by_State_2023.csv"), show_col_types = FALSE) |>
+  glimpse()
 ```
 
-The second data... TODO
+The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023. 
 
-## Questions
+# Questions
 
-The two questions you want to answer.
+Which jurisdictions in Arizona had the highest property crime rates per capita in 2023, and which specific offenses contributed most to those rates?
 
-## Analysis plan
+Which states had the highest and lowest property crime rates per 100,000 residents in 2023, and what offense categories were most prevalent in those states?
 
-A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+# Analysis plan
 
 The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI's data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction.
 
-### Bar Plot Justification:
-	Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.
+## Bar Plot Justification:
 
-### Scatter plot Justification:
-	The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.
+Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.
+
+## Scatter plot Justification:
+
+The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.
 
 The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. ~~In addition to this snapshot, the analysis aims to explore how property crime rates have changed over recent years, using historical FBI data. This will help highlight long-term trends and variations across states.~~
 
-\*\*Revise last sentence since we are not using historical data (new proposed sentence): In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total. 
+Revise last sentence since we are not using historical data (new proposed sentence): In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total.
 
 # References
 
@@ -83,8 +79,6 @@ Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type 
 
 In-text citation: (FBI, 2024)
 
-Question 2:  Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 [Data set]. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#
+Question 2: Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 [Data set]. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#
 
 In-text citation: (FBI, 2024)
-
-
