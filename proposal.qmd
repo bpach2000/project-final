@@ -67,11 +67,11 @@ The first area of analysis focuses on understanding patterns in violent crimes r
 
 One member of the team is new to Arizona and is particularly interested in how crime rates differ from one jurisdiction to another within the state. Another team member is interested in true crime documentaries. Given the widespread public interest in true crime, which is often highlighted in the media, analyzing this data could also show real patterns behind these narratives. This exploration may reveal not only how violent crime is distributed geographically, but also which types of offenses are most prevalent in different areas.
 
-### Bar Plot Justification:
+### Bar plot justification:
 
 Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.
 
-### Scatter plot Justification:
+### Scatter plot justification:
 
 The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.
 
@@ -79,7 +79,13 @@ The second group of graphs will be scatter plots, illustrating the relationship 
 
 The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition, the analysis aims to explore how property crime rates vary from state to state, based on the volume of reported incidents.
 
-![Example of US Spatial Property Crime Data Map](images/united states question 2 visual example.jpg)
+### Spatial map justification:
+
+First, we intend to use a spatial map to demonstrate the comparison of property crime by state. Population will be a factor in the legend, allowing users to distinguish between states based on color, population, and crime levels. The map is meant to serve as a visual display to show which parts of the country experience more property crime, similar to a crime hotspot map. The states will be colored based on numerical crime values.
+
+### Bar chart justification:
+
+Second, a bar chart showing all 50 states will display the total property crime counts for 2023. This will give a clear view of which states had the highest and lowest numbers overall. Lastly, a percent-of-total bar chart will show all 50 states’ property crime counts as a percentage of the national total. The chart will use a 100% scale, with each state labeled by its percentage (e.g., 2.4%, 5.5%). Together, these three visual displays will create a story that highlights which states have the highest property crime rates. A detailed analysis will be written based on the results of the three statistical displays combined.
 
 # References
 

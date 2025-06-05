@@ -4817,10 +4817,14 @@ vertical-align: -.125em;
   <li><a href="#question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023" id="toc-question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023" class="nav-link" data-scroll-target="#question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023">Question 1 - Arizona’s Highest Crime Rates by Jurisdiction and Offense in 2023</a>
   <ul class="collapse">
   <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#bar-plot-justification" id="toc-bar-plot-justification" class="nav-link" data-scroll-target="#bar-plot-justification">Bar Plot Justification:</a></li>
-  <li><a href="#scatter-plot-justification" id="toc-scatter-plot-justification" class="nav-link" data-scroll-target="#scatter-plot-justification">Scatter plot Justification:</a></li>
+  <li><a href="#bar-plot-justification" id="toc-bar-plot-justification" class="nav-link" data-scroll-target="#bar-plot-justification">Bar plot justification:</a></li>
+  <li><a href="#scatter-plot-justification" id="toc-scatter-plot-justification" class="nav-link" data-scroll-target="#scatter-plot-justification">Scatter plot justification:</a></li>
   </ul></li>
-  <li><a href="#question-2---states-with-the-highest-property-crime-rates-in-2023" id="toc-question-2---states-with-the-highest-property-crime-rates-in-2023" class="nav-link" data-scroll-target="#question-2---states-with-the-highest-property-crime-rates-in-2023">Question 2 - States with the Highest Property Crime Rates in 2023</a></li>
+  <li><a href="#question-2---states-with-the-highest-property-crime-rates-in-2023" id="toc-question-2---states-with-the-highest-property-crime-rates-in-2023" class="nav-link" data-scroll-target="#question-2---states-with-the-highest-property-crime-rates-in-2023">Question 2 - States with the Highest Property Crime Rates in 2023</a>
+  <ul class="collapse">
+  <li><a href="#spatial-map-justification" id="toc-spatial-map-justification" class="nav-link" data-scroll-target="#spatial-map-justification">Spatial map justification:</a></li>
+  <li><a href="#bar-chart-justification" id="toc-bar-chart-justification" class="nav-link" data-scroll-target="#bar-chart-justification">Bar chart justification:</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -5002,17 +5006,31 @@ $ ...16                              &lt;chr&gt; NA, NA, NA, &quot;Stolen \nProp
 <p>One member of the team is new to Arizona and is particularly interested in how crime rates differ from one jurisdiction to another within the state. Another team member is interested in true crime documentaries. Given the widespread public interest in true crime, which is often highlighted in the media, analyzing this data could also show real patterns behind these narratives. This exploration may reveal not only how violent crime is distributed geographically, but also which types of offenses are most prevalent in different areas.</p>
 </section>
 <section id="bar-plot-justification" class="level3">
-<h3 class="anchored" data-anchor-id="bar-plot-justification">Bar Plot Justification:</h3>
+<h3 class="anchored" data-anchor-id="bar-plot-justification">Bar plot justification:</h3>
 <p>Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.</p>
 </section>
 <section id="scatter-plot-justification" class="level3">
-<h3 class="anchored" data-anchor-id="scatter-plot-justification">Scatter plot Justification:</h3>
+<h3 class="anchored" data-anchor-id="scatter-plot-justification">Scatter plot justification:</h3>
 <p>The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.</p>
 </section>
 </section>
 <section id="question-2---states-with-the-highest-property-crime-rates-in-2023" class="level2">
 <h2 class="anchored" data-anchor-id="question-2---states-with-the-highest-property-crime-rates-in-2023">Question 2 - States with the Highest Property Crime Rates in 2023</h2>
 <p>The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition, the analysis aims to explore how property crime rates vary from state to state, based on the volume of reported incidents.</p>
+<section id="spatial-map-justification" class="level3">
+<h3 class="anchored" data-anchor-id="spatial-map-justification">Spatial map justification:</h3>
+<p>First, we intend to use a spatial map to demonstrate the comparison of property crime by state. Population will be a factor in the legend, allowing users to distinguish between states based on color, population, and crime levels. The map is meant to serve as a visual display to show which parts of the country experience more property crime, similar to a crime hotspot map. The states will be colored based on numerical crime values.</p>
+</section>
+<section id="bar-chart-justification" class="level3">
+<h3 class="anchored" data-anchor-id="bar-chart-justification">Bar chart justification:</h3>
+<p>Second, a bar chart showing all 50 states will display the total property crime counts for 2023. This will give a clear view of which states had the highest and lowest numbers overall. Lastly, a percent-of-total bar chart will show all 50 states’ property crime counts as a percentage of the national total. The chart will use a 100% scale, with each state labeled by its percentage (e.g., 2.4%, 5.5%). Together, these three visual displays will create a story that highlights which states have the highest property crime rates. A detailed analysis will be written based on the results of the three statistical displays combined.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img role="img" src="images/united_states_question_2_visual_example.jpg" class="img-fluid figure-img"></p>
+<figcaption>Example of US Spatial Property Crime Data Map</figcaption>
+</figure>
+</div>
+</section>
 </section>
 </section>
 <section id="references" class="level1">
@@ -5748,11 +5766,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-73"><a href="#cb6-73"></a></span>
 <span id="cb6-74"><a href="#cb6-74"></a>One member of the team is new to Arizona and is particularly interested in how crime rates differ from one jurisdiction to another within the state. Another team member is interested in true crime documentaries. Given the widespread public interest in true crime, which is often highlighted in the media, analyzing this data could also show real patterns behind these narratives. This exploration may reveal not only how violent crime is distributed geographically, but also which types of offenses are most prevalent in different areas.</span>
 <span id="cb6-75"><a href="#cb6-75"></a></span>
-<span id="cb6-76"><a href="#cb6-76"></a><span class="fu">### Bar Plot Justification:</span></span>
+<span id="cb6-76"><a href="#cb6-76"></a><span class="fu">### Bar plot justification:</span></span>
 <span id="cb6-77"><a href="#cb6-77"></a></span>
 <span id="cb6-78"><a href="#cb6-78"></a>Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.</span>
 <span id="cb6-79"><a href="#cb6-79"></a></span>
-<span id="cb6-80"><a href="#cb6-80"></a><span class="fu">### Scatter plot Justification:</span></span>
+<span id="cb6-80"><a href="#cb6-80"></a><span class="fu">### Scatter plot justification:</span></span>
 <span id="cb6-81"><a href="#cb6-81"></a></span>
 <span id="cb6-82"><a href="#cb6-82"></a>The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.</span>
 <span id="cb6-83"><a href="#cb6-83"></a></span>
@@ -5760,15 +5778,26 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-85"><a href="#cb6-85"></a></span>
 <span id="cb6-86"><a href="#cb6-86"></a>The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition, the analysis aims to explore how property crime rates vary from state to state, based on the volume of reported incidents.</span>
 <span id="cb6-87"><a href="#cb6-87"></a></span>
-<span id="cb6-88"><a href="#cb6-88"></a><span class="fu"># References</span></span>
+<span id="cb6-88"><a href="#cb6-88"></a><span class="fu">### Spatial map justification:</span></span>
 <span id="cb6-89"><a href="#cb6-89"></a></span>
-<span id="cb6-90"><a href="#cb6-90"></a>Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type by agency, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-90"><a href="#cb6-90"></a>First, we intend to use a spatial map to demonstrate the comparison of property crime by state. Population will be a factor in the legend, allowing users to distinguish between states based on color, population, and crime levels. The map is meant to serve as a visual display to show which parts of the country experience more property crime, similar to a crime hotspot map. The states will be colored based on numerical crime values.</span>
 <span id="cb6-91"><a href="#cb6-91"></a></span>
-<span id="cb6-92"><a href="#cb6-92"></a>In-text citation: (FBI, 2024)</span>
+<span id="cb6-92"><a href="#cb6-92"></a><span class="fu">### Bar chart justification:</span></span>
 <span id="cb6-93"><a href="#cb6-93"></a></span>
-<span id="cb6-94"><a href="#cb6-94"></a>Question 2: Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-94"><a href="#cb6-94"></a>Second, a bar chart showing all 50 states will display the total property crime counts for 2023. This will give a clear view of which states had the highest and lowest numbers overall. Lastly, a percent-of-total bar chart will show all 50 states’ property crime counts as a percentage of the national total. The chart will use a 100% scale, with each state labeled by its percentage (e.g., 2.4%, 5.5%). Together, these three visual displays will create a story that highlights which states have the highest property crime rates. A detailed analysis will be written based on the results of the three statistical displays combined.</span>
 <span id="cb6-95"><a href="#cb6-95"></a></span>
-<span id="cb6-96"><a href="#cb6-96"></a>In-text citation: (FBI, 2024)</span>
+<span id="cb6-96"><a href="#cb6-96"></a><span class="al">![Example of US Spatial Property Crime Data Map](images/united_states_question_2_visual_example.jpg)</span>{fig-cap=&quot;Example of US Spatial Property Crime Data Map&quot;}</span>
+<span id="cb6-97"><a href="#cb6-97"></a></span>
+<span id="cb6-98"><a href="#cb6-98"></a></span>
+<span id="cb6-99"><a href="#cb6-99"></a><span class="fu"># References</span></span>
+<span id="cb6-100"><a href="#cb6-100"></a></span>
+<span id="cb6-101"><a href="#cb6-101"></a>Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type by agency, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-102"><a href="#cb6-102"></a></span>
+<span id="cb6-103"><a href="#cb6-103"></a>In-text citation: (FBI, 2024)</span>
+<span id="cb6-104"><a href="#cb6-104"></a></span>
+<span id="cb6-105"><a href="#cb6-105"></a>Question 2: Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-106"><a href="#cb6-106"></a></span>
+<span id="cb6-107"><a href="#cb6-107"></a>In-text citation: (FBI, 2024)</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
