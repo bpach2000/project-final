@@ -1,11 +1,11 @@
 ---
-title: "Proposal title"
+title: "Crime in Arizona and Across the United States"
 subtitle: "Proposal"
 author: 
   - name: "Brooke Pacheco and Stacey O'Dell"
     affiliations:
       - name: "School of Information, University of Arizona"
-description: "Project description"
+description: "This project will provide a comprehensive analysis of crime data in Arizona and across the United States. We will expose patterns and trends by examining various offense categories, population data, and jurisdiction-level reporting. The analysis will include visualizations to show how crime rates vary within Arizona and among different states nationwide."
 format:
   html:
     code-tools: true
@@ -25,11 +25,11 @@ library(tidyverse)
 library(here)
 ```
 
-# Data Set
+# Dataset
 
 The Federal Bureau of Investigation (FBI) oversees the Uniform Crime Reporting (UCR) program, a nationwide initiative designed to gather and share crime data from across the United States. Participation in the UCR program is mandated for local, state, tribal, and federal law enforcement agencies, each of which is responsible for submitting a standardized set of crime data to the FBI on an annual basis. For the purposes of this proposal, two data sets were extracted from the FBI’s Crime Data Explorer platform.
 
-## Data Set 1
+## Dataset 1
 
 ```{r}
 # Read in data from Arizona offenses in 2023 file
@@ -38,9 +38,9 @@ arizona_crimes <- read_csv(here(
   glimpse()
 ```
 
-The first data set utilized in this analysis contains crime statistics for the state of Arizona, dis-aggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023.
+The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023.
 
-## Data Set 2
+## Dataset 2
 
 ```{r}
 # Read data from property crimes by state in 2023 file
@@ -49,7 +49,7 @@ property <- read_csv(here(
   glimpse()
 ```
 
-The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023.
+The second dataset includes crime statistics from all 50 states, organized by offense group and population for 2023.
 
 # Questions
 
@@ -63,7 +63,9 @@ Which states had the highest and lowest property crime rates per 100,000 residen
 
 ### Introduction
 
-The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI's data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction. True crime is also an interesting subject matter and gets a lot of attention in the media and it would be interesting to look at the data involved.
+The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI's dataset on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported.
+
+One member of the team is new to Arizona and is particularly interested in how crime rates differ from one jurisdiction to another within the state. Another team member is interested in true crime documentaries. Given the widespread public interest in true crime, which is often highlighted in the media, analyzing this data could also show real patterns behind these narratives. This exploration may reveal not only how violent crime is distributed geographically, but also which types of offenses are most prevalent in different areas.
 
 ### Bar Plot Justification:
 
@@ -73,10 +75,9 @@ Comparing categorical data, such as offense types across different agencies, is 
 
 The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.
 
-
 ## Question 2 - States with the Highest Property Crime Rates in 2023
 
-The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total.
+The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition, the analysis aims to explore how property crime rates vary from state to state, based on the volume of reported incidents.
 
 # References
 
