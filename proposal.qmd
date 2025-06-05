@@ -79,6 +79,8 @@ The second group of graphs will be scatter plots, illustrating the relationship 
 
 The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. In addition, the analysis aims to explore how property crime rates vary from state to state, based on the volume of reported incidents.
 
+![Example of US Spatial Property Crime Data Map](images/united states question 2 visual example.jpg)
+
 # References
 
 Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type by agency, 2023 [Data set]. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#
