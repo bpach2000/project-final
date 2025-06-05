@@ -4814,8 +4814,13 @@ vertical-align: -.125em;
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a>
   <ul class="collapse">
+  <li><a href="#question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023" id="toc-question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023" class="nav-link" data-scroll-target="#question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023">Question 1 - Arizona’s Highest Crime Rates by Jurisdiction and Offense in 2023</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#bar-plot-justification" id="toc-bar-plot-justification" class="nav-link" data-scroll-target="#bar-plot-justification">Bar Plot Justification:</a></li>
   <li><a href="#scatter-plot-justification" id="toc-scatter-plot-justification" class="nav-link" data-scroll-target="#scatter-plot-justification">Scatter plot Justification:</a></li>
+  </ul></li>
+  <li><a href="#question-2---states-with-the-highest-property-crime-rates-in-2023" id="toc-question-2---states-with-the-highest-property-crime-rates-in-2023" class="nav-link" data-scroll-target="#question-2---states-with-the-highest-property-crime-rates-in-2023">Question 2 - States with the Highest Property Crime Rates in 2023</a></li>
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -4949,7 +4954,7 @@ $ ...67   &lt;chr&gt; NA, NA, NA, &quot;Purchasing\nProstitution&quot;, &quot;0&
 $ ...68   &lt;chr&gt; NA, NA, NA, &quot;Weapon\nLaw\nViolations&quot;, &quot;61&quot;, &quot;140&quot;, &quot;3&quot;, &quot;49&quot;,…</code></pre>
 </div>
 </div>
-<p>The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023. The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023. I will provide more details about the variables in each data set and explain the comparisons made in the following sections of this proposal.</p>
+<p>The first data set utilized in this analysis contains crime statistics for the state of Arizona, dis-aggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023.</p>
 </section>
 <section id="data-set-2" class="level2">
 <h2 class="anchored" data-anchor-id="data-set-2">Data Set 2</h2>
@@ -4979,24 +4984,33 @@ $ ...15                              &lt;chr&gt; NA, NA, NA, &quot;Robbery&quot;
 $ ...16                              &lt;chr&gt; NA, NA, NA, &quot;Stolen \nProperty \nOf…</code></pre>
 </div>
 </div>
-<p>The second data… TODO</p>
+<p>The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023.</p>
 </section>
 </section>
 <section id="questions" class="level1">
 <h1>Questions</h1>
-<p>The two questions you want to answer.</p>
+<p>Which jurisdictions in Arizona had the highest crime rates per capita in 2023, and which specific offenses contributed most to those rates?</p>
+<p>Which states had the highest and lowest property crime rates per 100,000 residents in 2023, and what offense categories were most prevalent in those states?</p>
 </section>
 <section id="analysis-plan" class="level1">
 <h1>Analysis plan</h1>
-<p>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</p>
-<p>The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI’s data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction.</p>
-<section id="bar-plot-justification" class="level2">
-<h2 class="anchored" data-anchor-id="bar-plot-justification">Bar Plot Justification:</h2>
+<section id="question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023" class="level2">
+<h2 class="anchored" data-anchor-id="question-1---arizonas-highest-crime-rates-by-jurisdiction-and-offense-in-2023">Question 1 - Arizona’s Highest Crime Rates by Jurisdiction and Offense in 2023</h2>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI’s data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction. True crime is also an interesting subject matter and gets a lot of attention in the media and it would be interesting to look at the data involved.</p>
+</section>
+<section id="bar-plot-justification" class="level3">
+<h3 class="anchored" data-anchor-id="bar-plot-justification">Bar Plot Justification:</h3>
 <p>Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.</p>
 </section>
-<section id="scatter-plot-justification" class="level2">
-<h2 class="anchored" data-anchor-id="scatter-plot-justification">Scatter plot Justification:</h2>
+<section id="scatter-plot-justification" class="level3">
+<h3 class="anchored" data-anchor-id="scatter-plot-justification">Scatter plot Justification:</h3>
 <p>The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.</p>
+</section>
+</section>
+<section id="question-2---states-with-the-highest-property-crime-rates-in-2023" class="level2">
+<h2 class="anchored" data-anchor-id="question-2---states-with-the-highest-property-crime-rates-in-2023">Question 2 - States with the Highest Property Crime Rates in 2023</h2>
 <p>The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. <del>In addition to this snapshot, the analysis aims to explore how property crime rates have changed over recent years, using historical FBI data. This will help highlight long-term trends and variations across states.</del></p>
 <p>Revise last sentence since we are not using historical data (new proposed sentence): In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total.</p>
 </section>
@@ -5705,7 +5719,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-42"><a href="#cb6-42"></a>  <span class="fu">glimpse</span>()</span>
 <span id="cb6-43"><a href="#cb6-43"></a><span class="in">```</span></span>
 <span id="cb6-44"><a href="#cb6-44"></a></span>
-<span id="cb6-45"><a href="#cb6-45"></a>The first data set utilized in this analysis contains crime statistics for the state of Arizona, disaggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023. The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023. I will provide more details about the variables in each data set and explain the comparisons made in the following sections of this proposal.</span>
+<span id="cb6-45"><a href="#cb6-45"></a>The first data set utilized in this analysis contains crime statistics for the state of Arizona, dis-aggregated by offense group, reporting agency (by location or jurisdiction), and population for the year 2023.</span>
 <span id="cb6-46"><a href="#cb6-46"></a></span>
 <span id="cb6-47"><a href="#cb6-47"></a><span class="fu">## Data Set 2</span></span>
 <span id="cb6-48"><a href="#cb6-48"></a></span>
@@ -5716,39 +5730,46 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb6-55"><a href="#cb6-55"></a>  <span class="fu">glimpse</span>()</span>
 <span id="cb6-56"><a href="#cb6-56"></a><span class="in">```</span></span>
 <span id="cb6-57"><a href="#cb6-57"></a></span>
-<span id="cb6-58"><a href="#cb6-58"></a>The second data... TODO</span>
+<span id="cb6-58"><a href="#cb6-58"></a>The second data set includes crime statistics from all 50 states, organized by offense group and population for 2023.</span>
 <span id="cb6-59"><a href="#cb6-59"></a></span>
 <span id="cb6-60"><a href="#cb6-60"></a><span class="fu"># Questions</span></span>
 <span id="cb6-61"><a href="#cb6-61"></a></span>
-<span id="cb6-62"><a href="#cb6-62"></a>The two questions you want to answer.</span>
+<span id="cb6-62"><a href="#cb6-62"></a>Which jurisdictions in Arizona had the highest crime rates per capita in 2023, and which specific offenses contributed most to those rates?</span>
 <span id="cb6-63"><a href="#cb6-63"></a></span>
-<span id="cb6-64"><a href="#cb6-64"></a><span class="fu"># Analysis plan</span></span>
+<span id="cb6-64"><a href="#cb6-64"></a>Which states had the highest and lowest property crime rates per 100,000 residents in 2023, and what offense categories were most prevalent in those states?</span>
 <span id="cb6-65"><a href="#cb6-65"></a></span>
-<span id="cb6-66"><a href="#cb6-66"></a>A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).</span>
+<span id="cb6-66"><a href="#cb6-66"></a><span class="fu"># Analysis plan</span></span>
 <span id="cb6-67"><a href="#cb6-67"></a></span>
-<span id="cb6-68"><a href="#cb6-68"></a>The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI&#39;s data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction.</span>
+<span id="cb6-68"><a href="#cb6-68"></a><span class="fu">## Question 1 - Arizona&#39;s Highest Crime Rates by Jurisdiction and Offense in 2023</span></span>
 <span id="cb6-69"><a href="#cb6-69"></a></span>
-<span id="cb6-70"><a href="#cb6-70"></a><span class="fu">## Bar Plot Justification:</span></span>
+<span id="cb6-70"><a href="#cb6-70"></a><span class="fu">### Introduction</span></span>
 <span id="cb6-71"><a href="#cb6-71"></a></span>
-<span id="cb6-72"><a href="#cb6-72"></a>Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.</span>
+<span id="cb6-72"><a href="#cb6-72"></a>The first area of analysis focuses on understanding patterns in violent crimes reported in 2023. Specifically, the goal is to examine how violent offenses vary by agency, taking into account the population size each agency serves and the specific types of violent crimes reported. By using the FBI&#39;s data set on offenses known to law enforcement by type and agency in 2023, we can identify trends, compare crime rates across jurisdictions, and assess the relationship between agency characteristics and the volume or type of violent crime reported. One member of the team is new to Arizona and is interested in understanding how crime rates vary from jurisdiction to jurisdiction. True crime is also an interesting subject matter and gets a lot of attention in the media and it would be interesting to look at the data involved.</span>
 <span id="cb6-73"><a href="#cb6-73"></a></span>
-<span id="cb6-74"><a href="#cb6-74"></a><span class="fu">## Scatter plot Justification:</span></span>
+<span id="cb6-74"><a href="#cb6-74"></a><span class="fu">### Bar Plot Justification:</span></span>
 <span id="cb6-75"><a href="#cb6-75"></a></span>
-<span id="cb6-76"><a href="#cb6-76"></a>The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.</span>
+<span id="cb6-76"><a href="#cb6-76"></a>Comparing categorical data, such as offense types across different agencies, is best visualized using a bar plot. Offenses will be displayed using grouped or stacked bars for each agency, allowing for a clear visual comparison of the number and types of violent crimes reported by jurisdiction. The x-axis will represent the agency (by jurisdiction), the y-axis will indicate the number of violent crimes, and the fill color of the bars will distinguish between offense types (e.g., murder, aggravated assault, robbery). Color mapping will be used to visually differentiate offense types across agencies. This plot will show which agencies report the highest numbers of violent crimes and the breakdown of those offenses by type.</span>
 <span id="cb6-77"><a href="#cb6-77"></a></span>
-<span id="cb6-78"><a href="#cb6-78"></a>The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. ~~In addition to this snapshot, the analysis aims to explore how property crime rates have changed over recent years, using historical FBI data. This will help highlight long-term trends and variations across states.~~</span>
+<span id="cb6-78"><a href="#cb6-78"></a><span class="fu">### Scatter plot Justification:</span></span>
 <span id="cb6-79"><a href="#cb6-79"></a></span>
-<span id="cb6-80"><a href="#cb6-80"></a>Revise last sentence since we are not using historical data (new proposed sentence): In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total.</span>
+<span id="cb6-80"><a href="#cb6-80"></a>The second group of graphs will be scatter plots, illustrating the relationship between the population size served by each reporting agency in Arizona and the number of violent crimes reported in 2023. The x-axis will represent the population size, and the y-axis will represent the number of violent crimes. Multiple faceted scatter plots for each offense type will allow for side-by-side comparison of how different types of violent crime vary with population size across Arizona jurisdictions. Within each facet, the color of the points will represent the total number of violent crimes reported by the agency. This visualization will help reveal patterns specific to each offense type within the state.</span>
 <span id="cb6-81"><a href="#cb6-81"></a></span>
-<span id="cb6-82"><a href="#cb6-82"></a><span class="fu"># References</span></span>
-<span id="cb6-83"><a href="#cb6-83"></a></span>
-<span id="cb6-84"><a href="#cb6-84"></a>Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type by agency, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
-<span id="cb6-85"><a href="#cb6-85"></a></span>
-<span id="cb6-86"><a href="#cb6-86"></a>In-text citation: (FBI, 2024)</span>
-<span id="cb6-87"><a href="#cb6-87"></a></span>
-<span id="cb6-88"><a href="#cb6-88"></a>Question 2: Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
-<span id="cb6-89"><a href="#cb6-89"></a></span>
-<span id="cb6-90"><a href="#cb6-90"></a>In-text citation: (FBI, 2024)</span>
+<span id="cb6-82"><a href="#cb6-82"></a></span>
+<span id="cb6-83"><a href="#cb6-83"></a><span class="fu">## Question 2 - States with the Highest Property Crime Rates in 2023</span></span>
+<span id="cb6-84"><a href="#cb6-84"></a></span>
+<span id="cb6-85"><a href="#cb6-85"></a>The second analysis centers on property crimes at the state level. This includes examining the number of property crime offenses reported in each state in 2023 and calculating what percentage of total reported offenses they represent. ~~In addition to this snapshot, the analysis aims to explore how property crime rates have changed over recent years, using historical FBI data. This will help highlight long-term trends and variations across states.~~</span>
+<span id="cb6-86"><a href="#cb6-86"></a></span>
+<span id="cb6-87"><a href="#cb6-87"></a>Revise last sentence since we are not using historical data (new proposed sentence): In addition to the snapshot, the analysis aims to explore how property crime rates vary from state to state, based on the number of reported incidents, population, and percentage of the total.</span>
+<span id="cb6-88"><a href="#cb6-88"></a></span>
+<span id="cb6-89"><a href="#cb6-89"></a><span class="fu"># References</span></span>
+<span id="cb6-90"><a href="#cb6-90"></a></span>
+<span id="cb6-91"><a href="#cb6-91"></a>Question 1: Federal Bureau of Investigation (FBI). (2024). Arizona offense type by agency, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-92"><a href="#cb6-92"></a></span>
+<span id="cb6-93"><a href="#cb6-93"></a>In-text citation: (FBI, 2024)</span>
+<span id="cb6-94"><a href="#cb6-94"></a></span>
+<span id="cb6-95"><a href="#cb6-95"></a>Question 2: Federal Bureau of Investigation (FBI). (2024). Crimes against property offenses: Offense category by state, 2023 <span class="co">[</span><span class="ot">Data set</span><span class="co">]</span>. U.S. Department of Justice, Crime Data Explorer. https://cde.ucr.cjis.gov/LATEST/webapp/#</span>
+<span id="cb6-96"><a href="#cb6-96"></a></span>
+<span id="cb6-97"><a href="#cb6-97"></a>In-text citation: (FBI, 2024)</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
